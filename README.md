@@ -2,7 +2,7 @@
 
 PyVidMaker is a providing users with a simple yet effective automated video editing tool. It is designed to facilitate the creation of video content through scripted dialogues, allowing users to effortlessly generate dynamic videos. By specifying actors, emotions, and actions within a script.
 
-Incorporating the advancements in Large Language Models (LLMs), PyVidMaker strives to render scripted videos with unprecedented ease. This project aspires to craft quick video scripts that are ready to be rendered.
+Incorporating the advancements in Large Language Models (LLMs), this project aspires to craft quick video scripts that are ready to be rendered.
 
 ## Features
 * **Mature User Interface:** PyVidMaker boasts a mature user interface facilitated by the integration of Gradio. This allows users to easily handle video generation and potential API calls.
