@@ -24,6 +24,47 @@ myactor|Spawn camper|smile
 ACTION|laugh|anotheractor
 ```
 
+## User Interface
+
+When you initiate the video generation process through the UI, a specific folder named after the video generator is cloned from the "./generators" directory. This cloned folder is then copied into the "ui_runners" folder. Within this new folder, the "app.py" file of the cloned generator is executed as a separate thread.
+
+```
++---------------------+       +-------------------------+       +--------------------------+
+|   User Interface    |       |       User Interface    |       |    Video Generator       |
+|       (Front)       |       |           (Logic)       |       |         (Folder)         |
++----------+----------+       +-------------+-----------+       +-------------+------------+
+           |                                |                                 |
+           | Start Video Generation          |                                |
+           |   for generator "generator id"  |                                |
+           |       with script "script"      |                                |
+           | -----------------------------> |                                 |
+           |                                |                                 |
+           |                                |                                 |
+           |                                |  Clone Generator Folder         |
+           |                                | ------------------------------> |
+           |                                |                                 |
+           |                                |                                  |
+           |                                |                                   |
+           |                                |                                    |
+           |                                |  Add script contents to             |
+           |                                |  ./stories/to_run/script_to_run.txt |
+           |                                | ----------------------------------> | 
+           |                                |                                     |
+           |                                |                                    |
+           |                                |                                   |
+           |                                |  Run app.py as Thread             |
+           |                                | --------------------------------> |
+           |                                |                                  |
+           |                                |                                  |
+           |                                |                                  |
+           |                                |                                  |
+           | <------------------------------|                                  |
+           |  Video Generation Completed    |                                  |
+           +--------------------------------|                                  |
+                                            |                                  |
+                                            +----------------------------------+
+```
+
 ## Getting started
 
 ### Docker Usage
