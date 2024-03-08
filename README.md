@@ -24,6 +24,14 @@ myactor|Spawn camper|smile
 ACTION|laugh|anotheractor
 ```
 
+The script format is a simple and structured way to define, in this case, a conversation for automated video editing. Each line represents an action or dialogue in the video, and it follows this pattern:
+
+- `actor|dialogue|emotion`: Specifies an actor, their spoken dialogue, and the corresponding emotion. For example:
+  - `myactor|Hello who's there?|think`: The actor "myactor" says "Hello who's there?" while thinking.
+
+- `ACTION|action_type|parameter`: Triggers a specific action. For example:
+  - `ACTION|laugh|anotheractor`: Initiates laughter action that takes as parameter the actor "anotheractor".
+
 ## User Interface
 
 When you initiate the video generation process through the UI, a specific folder named after the video generator is cloned from the "./generators" directory. This cloned folder is then copied into the "ui_runners" folder. Within this new folder, the "app.py" file of the cloned generator is executed as a separate thread.
