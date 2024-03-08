@@ -36,6 +36,8 @@ The script format is a simple and structured way to define, in this case, a conv
 
 When you initiate the video generation process through the UI, a specific folder named after the video generator is cloned from the "./generators" directory. This cloned folder is then copied into the "ui_runners" folder. Within this new folder, the "app.py" file of the cloned generator is executed as a separate thread.
 
+The generator was designed to operate autonomously, and this autonomous functionality is precisely why the UI triggers the execution of the "app.py" file when initiating the video generation process. 
+
 ```
 +---------------------+       +-------------------------+       +--------------------------+
 |   User Interface    |       |       User Interface    |       |    Video Generator       |
