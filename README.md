@@ -12,6 +12,11 @@ Incorporating the advancements in Large Language Models (LLMs), this project asp
 * **Actions/Panorama Features:** Developers can add their own actions, making PyVidMaker modular and customizable according to specific needs and creative requirements.
 * **Automatic Subtitles:** PyVidMaker automatically generates animated subtitles synchronized with the actors' speech. The tool also supports custom fonts, providing users with flexibility in designing subtitles that align with their creative vision.
 
+## Limitations
+PyVidMaker has certain limitations and problems that users should be aware of:
+
+* **Slow Rendering Times:** This is primarily attributed to the moviepy compositing process, which can be relatively slow, especially when handling complex video compositions. [threaded_writefile](https://github.com/Zulivan/PyVidMaker/blob/master/__INSTANCE__/core/utils.py) proved fruitless in its attempt at optimization.
+
 ## Example script
 
 ```
@@ -36,9 +41,9 @@ The script format is a simple and structured way to define, in this case, a conv
 
 ![image](https://github.com/Zulivan/PyVidMaker/assets/39313759/92747a69-8cd5-48c5-ba87-f4a49a3c9264)
 
-When initiating the video generation process through the UI, a specific folder named after the video generator is cloned from the "./generators" directory. This cloned folder is then copied into the "ui_runners" folder. Within this new folder, the "app.py" file of the cloned generator is executed as a separate thread.
+The generator was originally designed to operate autonomously. To execute the video generator without utilizing the user interface, you can simply place the script file into the "/stories/to_run" folder and run the "app.py" file. However, it's important to note that if the process crashes, you'll need to manually restart it. This method allows the generator to function autonomously, as intended.
 
-The generator was designed to operate autonomously, and this autonomous functionality is precisely why the UI triggers the execution of the "app.py" file when initiating the video generation process. 
+When initiating the video generation process through the UI, a specific folder named after the video generator is cloned from the "./generators" directory. This cloned folder is then copied into the "ui_runners" folder. Within this new folder, the "app.py" file of the cloned generator is executed as a separate thread.
 
 ```
 +---------------------+       +-------------------------+       +--------------------------+
