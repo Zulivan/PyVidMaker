@@ -40,7 +40,7 @@ The script format is a simple and structured way to define, in this case, a conv
 
 ## User Interface
 
-The generator was originally designed to operate autonomously. To execute the video generator without utilizing the user interface, you can simply place the script file into the "/stories/to_run" folder and run the "app.py" file. However, it's important to note that if the process crashes, you'll need to restart it.
+The [video generator](https://github.com/Zulivan/PyVidMaker/tree/master/__INSTANCE__) was originally designed to operate autonomously. To execute the video generator without utilizing the user interface, you can simply place the script file into the "/stories/to_run" folder and run the "app.py" file. However, it's important to note that if the process crashes, you'll need to restart it.
 
 ![image](https://github.com/Zulivan/PyVidMaker/assets/39313759/92747a69-8cd5-48c5-ba87-f4a49a3c9264)
 
