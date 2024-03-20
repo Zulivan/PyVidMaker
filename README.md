@@ -90,7 +90,7 @@ When initiating the video generation process through the UI, a specific folder n
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/PyVidMaker.git
+git clone https://github.com/Zulivan/PyVidMaker.git
 cd PyVidMaker
 ```
 
@@ -104,4 +104,4 @@ docker build -t pyvidmaker .
 
 The user interface can be accessed at port 80
 
-[See the wiki](https://github.com/Zulivan/PyVidMaker/wiki)
+[Learn more about PyVidMaker](https://github.com/Zulivan/PyVidMaker/wiki)
