@@ -11,6 +11,7 @@ Incorporating the advancements in Large Language Models (LLMs), this project asp
 * **Automated Actor Rendering:** This includes the automatic combination of actor images, reducing the manual effort required for visual elements in the videos.
 * **Actions/Panorama Features:** Developers can add their own actions, making PyVidMaker modular and customizable according to specific needs and creative requirements.
 * **Automatic Subtitles:** PyVidMaker automatically generates animated subtitles synchronized with the actors' speech. The tool also supports custom fonts, providing users with flexibility in designing subtitles that align with their creative vision.
+* **Background Gameplay Embed:** PyVidMaker incorporates automatically selected and cropped gameplay video, embedding it at the video's bottom to potentially captivate the audience.
 
 ## Limitations
 PyVidMaker has certain limitations and problems that users should be aware of:
@@ -34,7 +35,7 @@ The script format is a simple and structured way to define, in this case, a conv
 - `actor|dialogue|emotion`: Specifies an actor, their spoken dialogue, and the corresponding emotion. For example:
   - `myactor|Hello who's there?|think`: The actor "myactor" says "Hello who's there?" while thinking.
 
-- `ACTION|action_type|parameter`: Triggers a specific action. For example:
+- `ACTION|action_name|parameter|parameter`: Triggers a specific action called "action_name" with arbitrary parameters.
   - `ACTION|laugh|anotheractor`: Initiates laughter action that takes as parameter the actor "anotheractor".
 
 ## User Interface
